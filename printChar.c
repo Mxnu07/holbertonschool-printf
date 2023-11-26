@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdarg.h>
 /**
 * printChar - Print character
 * @args: argument pointer
