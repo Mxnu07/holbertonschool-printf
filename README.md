@@ -48,21 +48,6 @@ Output:
 ```
 7
 ```
-
-#### b
-The `unsigned int` argument is converted to signed decimal notation.
-
-Example `main.c`:
-```
-int main(void)
-{
-    _printf("%b\n", 7);
-}
-```
-Output:
-```
-111
-```
 #### c
 The `int` argument is converted to an `unsigned char`.
 
