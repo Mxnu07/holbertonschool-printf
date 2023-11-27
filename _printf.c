@@ -6,7 +6,7 @@
  */
 int _printf(const char * const format, ...)
 {
-	convert_match m[] = {
+	match m[] = {
 		{"%s", printStr},
 		{"%c", printChar},
 		{"%%", print37},
