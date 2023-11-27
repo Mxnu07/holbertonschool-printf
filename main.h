@@ -19,5 +19,6 @@ int _putchar(char c);
 int _strlen(char *str);
 int print_i(va_list args);
 int print_d(va_list args);
+int print37(void);
 
 #endif
