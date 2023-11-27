@@ -20,7 +20,7 @@ int _strlen(char *str)
  * @str: Type char pointer
  * Return: i
  */
-int _strlen(const char *str)
+int _strlenc(const char *str)
 {
 	int i;
 
