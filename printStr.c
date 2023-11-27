@@ -27,3 +27,4 @@ int printStr(va_list args)
 		_putchar(str[count]);
 	return (len);
 }
+}
