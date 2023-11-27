@@ -6,7 +6,7 @@ recreation of the C standard library function, `printf`.
 
 ## Description
 
-The function `print_f` writes output to standard output. The function writes
+The function `_printf` writes output to standard output. The function writes
 under the control of a `format` string that specifies how subsequent arguments
 are converted for output.
 
