@@ -23,7 +23,7 @@ int printStr(va_list args)
 	else
 	{
 		len = _strlen(str);
-		for (count = 0; count < len; i++)
+		for (count = 0; count < len; count++)
 		_putchar(str[count]);
 	return (len);
 }
