@@ -14,3 +14,17 @@ int _strlen(char *str)
 
 		return (1);
 }
+
+/**
+ * _strlen - Strlen function but applied for constant char pointer s
+ * @str: Type char pointer
+ * Return: i
+ */
+int _strlen(const char *str)
+{
+	int i;
+
+	for (i = 0; str[i] != 0; i++)
+		;
+	return (i);
+}
