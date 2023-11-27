@@ -1,54 +1,44 @@
 #include "main.h"
-
 /**
- * _printf - custom printf function
- * @format: identifier
- * Return: length
+ * _printf - is a function that selects the correct function to print.
+ * @format: identifier to look for.
+ * Return: the length of the string.
  */
-int _printf(const char *format, ...)
+int _printf(const char * const format, ...)
 {
-    match m[] = {
-        {"%c", printChar},
-        {"%s", printStr},
-        {"%%", print37},
-        {"%d", print_d},
-        {"%i", print_i}
-    };
+	convert_match m[] = {
+		{"%s", printStr},
+		{"%c", printChar},
+		{"%%", print37},
+		{"%i", print_i},
+		{"%d", print_d}
+	};
 
-    va_list args;
-    int i = 0;
-    int length = 0;
+	va_list args;
+	int i = 0, j, len = 0;
 
-    va_start(args, format);
+	va_start(args, format);
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+		return (-1);
 
-    if (format == NULL || (format[0] == '%' && format[1] == '\0'))
-    {
-        va_end(args);
-        return (-1);
-    }
-
-    while (format[i] != '\0')
-    {
-        int j;
-
-        for (j = 0; j < 5; j++)
-        {
-            if (m[j].id[0] == format[i] && m[j].id[1] == format[i + 1])
-            {
-                length += m[j].f(args);
-                break;
-            }
-        }
-
-        if (j == 5)
-        {
-            _putchar(format[i]);
-            length++;
-        }
-
-        i++;
-    }
-
-    va_end(args);
-    return (length);
+Here:
+	while (format[i] != '\0')
+	{
+		j = 4;
+		while (j >= 0)
+		{
+			if (m[j].id[0] == format[i] && m[j].id[1] == format[i + 1])
+			{
+				len += m[j].f(args);
+				i = i + 2;
+				goto Here;
+			}
+			j--;
+		}
+		_putchar(format[i]);
+		len++;
+		i++;
+	}
+	va_end(args);
+	return (len);
 }
