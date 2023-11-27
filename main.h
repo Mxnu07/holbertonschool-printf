@@ -17,7 +17,7 @@ int printChar(va_list args);
 int printStr(va_list args);
 int _putchar(char c);
 int _strlen(char *str);
-int print_i(val_list args);
-int print_d(val_list args);
+int print_i(va_list args);
+int print_d(va_list args);
 
 #endif
