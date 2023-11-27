@@ -10,7 +10,7 @@ typedef struct format
 {
   char *id;
   int (*f)();
-}match
+}match;
 
 int _printf(const char *format, ...);
 int printChar(va_list args);
