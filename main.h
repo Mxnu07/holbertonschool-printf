@@ -8,9 +8,9 @@
 
 typedef struct format
 {
-  char *id;
-  int (*f)();
-}match;
+char *id;
+int (*f)();
+} match;
 
 int _printf(const char *format, ...);
 int printChar(va_list args);
